@@ -13,15 +13,15 @@ public class ManagerdashboardController {
     private StackPane centerPane;
 
     @FXML
-    private Button inventoryButton, salesButton, ordersButton, profileButton, logoutButton;
+    private Button inventoryButton, salesRecordingButton, stockMonitoringButton, reportingButton, logoutButton;
 
     @FXML
     public void initialize() {
         // Sidebar buttons
         inventoryButton.setOnAction(e -> showInventory());
-        salesButton.setOnAction(e -> showSales());
-        ordersButton.setOnAction(e -> showOrders());
-        profileButton.setOnAction(e -> showProfile());
+        salesRecordingButton.setOnAction(e -> showSalesRecording());
+        stockMonitoringButton.setOnAction(e -> showStockMonitoring());
+        reportingButton.setOnAction(e -> showReporting());
 
         // Logout button HAHHAHAHAHAHAHAH
         logoutButton.setOnAction(e -> {
@@ -34,38 +34,43 @@ public class ManagerdashboardController {
     }
 
     // to basically show the table in rightparts
+    // ---------- NOTE MUCH BETTER NA YUNG NASA ADMIN, DONT FORGET TO ADD HERE SINCE I FINISH IT THERE FIRST 
+    // TECHNICALL NOT FINISH BUT U KNOW WHTA I MEAN ----------//
     
     private void showInventory() {
         centerPane.getChildren().clear();
+    TableView<String> table = new TableView<>();
+    TableColumn<String, String> prdctidCol = new TableColumn<>("Product ID");
+    TableColumn<String, String> nameCol = new TableColumn<>("Product Name");
+    TableColumn<String, String> ctgryCol = new TableColumn<>("Category");
+    TableColumn<String, String> qtyCol = new TableColumn<>("Quantity");  
+    TableColumn<String, String> prcCol = new TableColumn<>("Price");
+    
 
-        TableView<String> table = new TableView<>();
-        TableColumn<String, String> nameCol = new TableColumn<>("Product Name");
-        TableColumn<String, String> qtyCol = new TableColumn<>("Quantity");
+    table.getColumns().addAll(prdctidCol, nameCol, ctgryCol, qtyCol, prcCol );
 
-        table.getColumns().addAll(nameCol, qtyCol);
-
-        // TODO: Load actual product data from database here
+       
 
         centerPane.getChildren().add(table);
     }
 
-    private void showSales() {
+    private void showSalesRecording() {
         centerPane.getChildren().clear();
-        Label label = new Label("Sales Report Page");
+        Label label = new Label("Sales Recording Page");
         label.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
         centerPane.getChildren().add(label);
     }
 
-    private void showOrders() {
+    private void showStockMonitoring() {
         centerPane.getChildren().clear();
-        Label label = new Label("Orders Page");
+        Label label = new Label("Stock Monitoring Page");
         label.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
         centerPane.getChildren().add(label);
     }
 
-    private void showProfile() {
+    private void showReporting() {
         centerPane.getChildren().clear();
-        Label label = new Label("Profile Page");
+        Label label = new Label("Reporting Page");
         label.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
         centerPane.getChildren().add(label);
     }

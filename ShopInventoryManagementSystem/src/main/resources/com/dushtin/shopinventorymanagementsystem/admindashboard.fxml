@@ -8,7 +8,7 @@
 
 <BorderPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dushtin.shopinventorymanagementsystem.AdmindashboardController">
 
-    <!-- Top bar with logout -->
+    <!-- top bar and logout and shi -->
     <top>
         <BorderPane prefHeight="85.0" style="-fx-padding: 15px; -fx-background-color: #e0e0e0;">
             
@@ -22,17 +22,17 @@
         </BorderPane>
     </top>
 
-    <!-- Left sidebar -->
+    <!-- left part then put some ids para ma call sa other files u get it -->
     <left>
         <VBox prefWidth="200" spacing="15" style="-fx-background-color: #f0f0f0; -fx-padding: 10;">
             <Button fx:id="buttonInventory" maxWidth="Infinity" text="View Inventory" />
-            <Button fx:id="buttonSalesReport" maxWidth="Infinity" text="Sales Report" />
-            <Button fx:id="buttonOrders" maxWidth="Infinity" text="Orders" />
-            <Button fx:id="buttonProfile" maxWidth="Infinity" text="Profile" />
+            <Button fx:id="buttonSalesRecording" maxWidth="Infinity" text="Sales Record" />
+            <Button fx:id="buttonStockMonitoring" maxWidth="Infinity" text="Stock Monitoring" />
+            <Button fx:id="buttonReporting" maxWidth="Infinity" text="Reporting" />
         </VBox>
     </left>
 
-    <!-- Center content -->
+    <!-- centerr -->
     <center>
         <StackPane fx:id="Centerpane" alignment="CENTER" style="-fx-background-color: #ffffff; -fx-padding: 20;">
             <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Welcome, Admin!" />

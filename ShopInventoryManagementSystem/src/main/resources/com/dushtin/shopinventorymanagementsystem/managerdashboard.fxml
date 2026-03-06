@@ -11,7 +11,7 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.dushtin.shopinventorymanagementsystem.ManagerdashboardController">
 
-    <!-- Top bar -->
+    <!-- for topbar -->
     <top>
         <BorderPane prefHeight="85.0" style="-fx-padding: 15px; -fx-background-color: #e0e0e0;">
             <center>
@@ -23,17 +23,17 @@
         </BorderPane>
     </top>
 
-    <!-- Left sidebar -->
+    <!-- leftbuttonsss -->
     <left>
         <VBox prefWidth="200" spacing="15" style="-fx-background-color: #f0f0f0; -fx-padding: 10;">
             <Button fx:id="inventoryButton" maxWidth="Infinity" text="View Inventory" />
-            <Button fx:id="salesButton" maxWidth="Infinity" text="Sales Report" />
-            <Button fx:id="ordersButton" maxWidth="Infinity" text="Orders" />
-            <Button fx:id="profileButton" maxWidth="Infinity" text="Profile" />
+            <Button fx:id="salesRecordingButton" maxWidth="Infinity" text="Sales Recording" />
+            <Button fx:id="stockMonitoringButton" maxWidth="Infinity" text="Stock Monitoring" />
+            <Button fx:id="reportingButton" maxWidth="Infinity" text="Reporting" />
         </VBox>
     </left>
 
-    <!-- Center content -->
+    <!-- rightcentere -->
     <center>
         <StackPane fx:id="centerPane" style="-fx-background-color: #ffffff; -fx-padding: 20;" alignment="CENTER">
             <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Welcome, Manager!" />
