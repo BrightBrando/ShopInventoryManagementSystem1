@@ -33,7 +33,8 @@ public class ManagerdashboardController {
         });
     }
 
-    // Show Inventory Table
+    // to basically show the table in rightparts
+    
     private void showInventory() {
         centerPane.getChildren().clear();
 
