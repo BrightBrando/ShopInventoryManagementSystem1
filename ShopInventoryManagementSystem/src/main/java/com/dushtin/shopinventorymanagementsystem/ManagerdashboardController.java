@@ -23,10 +23,10 @@ public class ManagerdashboardController {
         ordersButton.setOnAction(e -> showOrders());
         profileButton.setOnAction(e -> showProfile());
 
-        // Logout button
+        // Logout button HAHHAHAHAHAHAHAH
         logoutButton.setOnAction(e -> {
             try {
-                App.setRoot("login"); // your login scene
+                App.setRoot("login"); 
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
