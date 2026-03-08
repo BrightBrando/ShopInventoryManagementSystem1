@@ -8,44 +8,57 @@
 
 <BorderPane prefHeight="600" prefWidth="800" style="-fx-background-color: #f5f7fa;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dushtin.shopinventorymanagementsystem.AdmindashboardController">
 
-    <!-- top bar and logout and shi -->
+    <!-- top header ng admin -->
     <top>
         <BorderPane prefHeight="85.0" style="-fx-padding: 15px 25px 15px 25px; -fx-background-color: #4e54c8; -fx-border-color: #dcdcdc; -fx-border-width: 0 0 1 0;">
             
             <center>
-                <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 28px;                                -fx-font-weight: bold;                               -fx-text-fill: #2c3e50;" text="Admin Dashboard" textAlignment="CENTER" />
+                <Label alignment="CENTER" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Admin Dashboard"/>
             </center>
             
             <right>
-                <Button fx:id="logoutButton" prefHeight="40.0" prefWidth="81.0" style="-fx-background-color: #4e54c8; -fx-text-fill: black; -fx-font-weight: bold; -fx-padding: 8 18 8 18; -fx-background-radius: 9; -fx-cursor: hand; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 4;" text="Logout" />
+                <Button fx:id="logoutButton" prefHeight="40.0" prefWidth="81.0"
+                        style="-fx-background-color: #4e54c8; -fx-text-fill: black; -fx-font-weight: bold; -fx-padding: 8 18 8 18; -fx-background-radius: 9; -fx-cursor: hand; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 4;"
+                        text="Logout"/>
             </right>
-         <left>
-            <Button fx:id="homeButton" prefHeight="40.0" prefWidth="81.0" style="-fx-background-color: #4e54c8; -fx-border-color: black; -fx-border-radius: 4; -fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: black; -fx-cursor: hand;" text="Home" BorderPane.alignment="CENTER" />
-         </left>
+
+            <left>
+                <Button fx:id="homeButton" prefHeight="40.0" prefWidth="81.0"
+                        style="-fx-background-color: #4e54c8; -fx-border-color: black; -fx-border-radius: 4; -fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: black; -fx-cursor: hand;"
+                        text="Home"/>
+            </left>
+
         </BorderPane>
     </top>
 
-    <!-- left part then put some ids para ma call sa other files u get it -->
+    <!-- buttons and sjit -->
     <left>
-        <VBox prefWidth="210" spacing="50.0" style="-fx-background-color: #8f94fb; -fx-padding: 20 15 20 15; -fx-border-color: #e0e0e0; -fx-border-width: 0 1 0 0;">
+        <VBox prefWidth="210" spacing="50.0"
+              style="-fx-background-color: #8f94fb; -fx-padding: 20 15 20 15; -fx-border-color: #e0e0e0; -fx-border-width: 0 1 0 0;">
 
-            <Button fx:id="buttonInventory" maxWidth="Infinity" style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;" text="View Inventory" />
+            <Button fx:id="buttonInventory" maxWidth="Infinity"
+                    style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;"
+                    text="View Inventory"/>
 
-            <Button fx:id="buttonSalesRecording" maxWidth="Infinity" style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;" text="Sales Record" />
+            <Button fx:id="buttonSalesRecording" maxWidth="Infinity"
+                    style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;"
+                    text="Sales Record"/>
 
-            <Button fx:id="buttonStockMonitoring" maxWidth="Infinity" style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;" text="Stock Monitoring" />
+            <Button fx:id="buttonStockMonitoring" maxWidth="Infinity"
+                    style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;"
+                    text="Stock Monitoring"/>
 
-            <Button fx:id="buttonReporting" maxWidth="Infinity" style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;" text="Reporting" />
+            <Button fx:id="buttonReporting" maxWidth="Infinity"
+                    style="-fx-background-color: #4e54c8; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 6; -fx-cursor: hand;"
+                    text="Reporting"/>
 
         </VBox>
     </left>
 
-    <!-- centerr -->
+    <!-- next to teh navigation, basically the centerpane    -->
     <center>
-        <StackPane fx:id="Centerpane" alignment="CENTER" style="-fx-background-color: #f0f2ff; -fx-padding: 40; -fx-background-radius: 10;">
-
-            <Label style="-fx-font-size: 26px;                           -fx-font-weight: bold;                           -fx-text-fill: #34495e;" text="Welcome, Admin!" />
-        </StackPane>
+        <StackPane fx:id="Centerpane" alignment="CENTER"
+                   style="-fx-background-color: #f0f2ff; -fx-padding: 40; -fx-background-radius: 10;"/>
     </center>
 
 </BorderPane>
