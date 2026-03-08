@@ -1,11 +1,20 @@
 package com.dushtin.shopinventorymanagementsystem;
 
+import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.util.converter.IntegerStringConverter;
+import javafx.util.converter.DefaultStringConverter;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 
 public class ManagerdashboardController {
 
@@ -13,7 +22,7 @@ public class ManagerdashboardController {
     private StackPane centerPane;
 
     @FXML
-    private Button inventoryButton, salesRecordingButton, stockMonitoringButton, reportingButton, logoutButton;
+    private Button inventoryButton, salesRecordingButton, stockMonitoringButton, reportingButton, logoutButton, homeButton;
 
     @FXML
     public void initialize() {
@@ -22,6 +31,8 @@ public class ManagerdashboardController {
         salesRecordingButton.setOnAction(e -> showSalesRecording());
         stockMonitoringButton.setOnAction(e -> showStockMonitoring());
         reportingButton.setOnAction(e -> showReporting());
+        homeButton.setOnAction(e -> showHome());
+        showHome();
 
         // Logout button HAHHAHAHAHAHAHAH
         logoutButton.setOnAction(e -> {
@@ -34,44 +45,63 @@ public class ManagerdashboardController {
     }
 
     // to basically show the table in rightparts
-    // ---------- NOTE MUCH BETTER NA YUNG NASA ADMIN, DONT FORGET TO ADD HERE SINCE I FINISH IT THERE FIRST 
-    // TECHNICALL NOT FINISH BUT U KNOW WHTA I MEAN ----------//
-    
+
     private void showInventory() {
         centerPane.getChildren().clear();
-    TableView<String> table = new TableView<>();
-    TableColumn<String, String> prdctidCol = new TableColumn<>("Product ID");
-    TableColumn<String, String> nameCol = new TableColumn<>("Product Name");
-    TableColumn<String, String> ctgryCol = new TableColumn<>("Category");
-    TableColumn<String, String> qtyCol = new TableColumn<>("Quantity");  
-    TableColumn<String, String> prcCol = new TableColumn<>("Price");
-    
-
-    table.getColumns().addAll(prdctidCol, nameCol, ctgryCol, qtyCol, prcCol );
-
-       
-
-        centerPane.getChildren().add(table);
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("inventoryadmin.fxml"));
+                centerPane.getChildren().add(root);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
     }
 
     private void showSalesRecording() {
         centerPane.getChildren().clear();
-        Label label = new Label("Sales Recording Page");
-        label.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
-        centerPane.getChildren().add(label);
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("salesrecordingadmin.fxml"));
+                centerPane.getChildren().add(root);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
     }
 
     private void showStockMonitoring() {
         centerPane.getChildren().clear();
-        Label label = new Label("Stock Monitoring Page");
-        label.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
-        centerPane.getChildren().add(label);
+
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("stockmonitoringadmin.fxml"));
+                centerPane.getChildren().add(root);
+            } catch (IOException e){
+                e.printStackTrace();
+            }        
     }
 
     private void showReporting() {
         centerPane.getChildren().clear();
-        Label label = new Label("Reporting Page");
-        label.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
-        centerPane.getChildren().add(label);
+
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("reportingadmin.fxml"));
+                centerPane.getChildren().add(root);
+            } catch (IOException e){
+                e.printStackTrace();
+            }        
+        
     }
+
+        private void showHome(){
+            centerPane.getChildren().clear();
+
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("homeadmin.fxml"));
+                centerPane.getChildren().add(root);
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+
+
+        }
+
+    
 }

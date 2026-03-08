@@ -17,6 +17,13 @@
             <right>
                 <Button fx:id="logoutButton" style="-fx-background-color: #4e54c8; -fx-text-fill: black; -fx-font-weight: bold; -fx-padding: 8 18 8 18; -fx-background-radius: 9; -fx-cursor: hand; -fx-border-color: black; -fx-border-radius: 4; -fx-border-width: 2;" text="Logout" />
             </right>
+            
+            <left>
+                <Button fx:id="homeButton" prefHeight="40.0" prefWidth="81.0"
+                        style="-fx-background-color: #4e54c8; -fx-border-color: black; -fx-border-radius: 4; -fx-border-width: 2; -fx-font-weight: bold; -fx-text-fill: black; -fx-cursor: hand;"
+                        text="Home"/>
+            </left>            
+            
         </BorderPane>
     </top>
 
@@ -36,7 +43,7 @@
 
     <!-- Center pane after ng sidebar -->
     <center>
-        <StackPane fx:id="centerPane" alignment="CENTER" style="-fx-background-color: #f0f2ff; -fx-padding: 40; -fx-background-radius: 10;">
+        <StackPane fx:id="centerPane" alignment="CENTER" style="-fx-background-color: #f0f2ff;">
 
             <Label style="-fx-font-size: 26px;                           -fx-font-weight: bold;                           -fx-text-fill: #34495e;" text="Welcome, Manager!" />
         </StackPane>

@@ -58,7 +58,7 @@
     <!-- next to teh navigation, basically the centerpane    -->
     <center>
         <StackPane fx:id="Centerpane" alignment="CENTER"
-                   style="-fx-background-color: #f0f2ff; -fx-padding: 40; -fx-background-radius: 10;"/>
+                   style="-fx-background-color: #f0f2ff;"/>
     </center>
 
 </BorderPane>
